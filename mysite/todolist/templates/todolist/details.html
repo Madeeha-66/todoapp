@@ -1,0 +1,15 @@
+{% extends 'todolist/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+</head>
+<body>
+    {% block body %}
+<h1>{{task.task_name}} -  {{task.task_desc}}  <a href="{% url 'task:edit' task.id %}" class="btn btn-primary">Edit Task </a>  <a href="{% url 'task:delete' task.id %}" class="btn btn-danger">Delete Task </a></h1>
+    {% endblock %}
+</body>
+</html>
